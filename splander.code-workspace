@@ -1,0 +1,28 @@
+{
+	"folders": [
+	  {
+		"path": "."
+	  }
+	],
+	"settings": {
+	  "eslint.format.enable": true,
+	  "eslint.lintTask.enable": true,
+	  "editor.formatOnSave": true,
+	  "liveSassCompile.settings.autoprefix": ["> 1%", "last 2 versions"],
+	  "liveSassCompile.settings.formats": [
+		{
+		  "format": "expanded",
+		  "extensionName": ".css",
+		  "savePath": "/assets/css/custom"
+		}
+	  ],
+	  "editor.tabSize": 2,
+	  "liveSassCompile.settings.generateMap": false,
+	  "liveSassCompile.settings.excludeList": [
+		"**/node_modules/**",
+		".vscode/**"
+	  ],
+	  "liveServer.settings.port": 5501
+	}
+  }
+  
