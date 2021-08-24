@@ -1,0 +1,469 @@
+/* =================== base =================== */
+html,
+body,
+a,
+abbr,
+address,
+area,
+article,
+aside,
+audio,
+b,
+base,
+bdi,
+bdo,
+blockquote,
+button,
+canvas,
+caption,
+center,
+circle,
+cite,
+clipPath,
+code,
+col,
+colgroup,
+cursor,
+data,
+datalist,
+dd,
+defs,
+del,
+desc,
+details,
+dfn,
+dialog,
+div,
+dl,
+dt,
+ellipse,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+filter,
+footer,
+foreignObject,
+form,
+g,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hatch,
+hatchpath,
+head,
+header,
+hgroup,
+i,
+iframe,
+image,
+img,
+input,
+ins,
+kbd,
+keygen,
+label,
+legend,
+li,
+line,
+link,
+main,
+map,
+mark,
+marker,
+mask,
+menu,
+menuitem,
+mesh,
+meshpatch,
+meshrow,
+nav,
+object,
+ol,
+optgroup,
+option,
+output,
+p,
+param,
+path,
+pattern,
+picture,
+pre,
+progress,
+q,
+rb,
+rect,
+rp,
+rt,
+rtc,
+ruby,
+s,
+samp,
+section,
+select,
+set,
+small,
+source,
+span,
+strike,
+strong,
+sub,
+summary,
+svg,
+symbol,
+sup,
+table,
+tbody,
+td,
+template,
+text,
+textarea,
+textPath,
+tfoot,
+th,
+thead,
+time,
+title,
+tr,
+tspan,
+u,
+ul,
+use,
+video,
+view,
+wbr {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  line-height: 1.15;
+  vertical-align: baseline;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 100%;
+  font: inherit;
+  font-family: "helvatica", "noto", "spoqa", sans-serif;
+  letter-spacing: -0.04em;
+  word-break: break-all;
+}
+
+html,
+body,
+a,
+address,
+article,
+aside,
+b,
+button,
+dd,
+div,
+dl,
+dt,
+figcaption,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+i,
+input,
+ins,
+label,
+legend,
+li,
+main,
+menu,
+menuitem,
+nav,
+ol,
+optgroup,
+option,
+output,
+p,
+section,
+select,
+small,
+span,
+strong,
+sub,
+sup,
+table,
+tbody,
+td,
+textarea,
+tfoot,
+th,
+thead,
+tr,
+tspan,
+u,
+ul {
+  stroke-width: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+html {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+  word-break: keep-all;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+a {
+  outline: 0;
+  background-color: transparent;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+ol,
+ul,
+dl {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: none;
+}
+
+select {
+  padding: 5px 10px;
+}
+
+address {
+  font-style: normal;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* =================== fonts =================== */
+/* ---------- open sans ---------- */
+@font-face {
+  font-family: "open sans";
+  font-weight: 800;
+  src: url("../../fonts/open_sans/OpenSans-ExtraBold.woff2") format("woff2"), url("../../fonts/open_sans/OpenSans-ExtraBold.woff") format("woff"), url("../../fonts/open_sans/OpenSans-ExtraBold.ttf") format("truetype"), url("../../fonts/open_sans/OpenSans-ExtraBold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "open sans";
+  font-weight: 700;
+  src: url("../../fonts/open_sans/OpenSans-Bold.woff2") format("woff2"), url("../../fonts/open_sans/OpenSans-Bold.woff") format("woff"), url("../../fonts/open_sans/OpenSans-Bold.ttf") format("truetype"), url("../../fonts/open_sans/OpenSans-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "open sans";
+  font-weight: 600;
+  src: url("../../fonts/open_sans/OpenSans-SemiBold.woff2") format("woff2"), url("../../fonts/open_sans/OpenSans-SemiBold.woff") format("woff"), url("../../fonts/open_sans/OpenSans-SemiBold.ttf") format("truetype"), url("../../fonts/open_sans/OpenSans-SemiBold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "open sans";
+  font-weight: 400;
+  src: url("../../fonts/open_sans/OpenSans-Regular.woff2") format("woff2"), url("../../fonts/open_sans/OpenSans-Regular.woff") format("woff"), url("../../fonts/open_sans/OpenSans-Regular.ttf") format("truetype"), url("../../fonts/open_sans/OpenSans-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "open sans";
+  font-weight: 300;
+  src: url("../../fonts/open_sans/OpenSans-Light.woff2") format("woff2"), url("../../fonts/open_sans/OpenSans-Light.woff") format("woff"), url("../../fonts/open_sans/OpenSans-Light.ttf") format("truetype"), url("../../fonts/open_sans/OpenSans-Light.otf") format("opentype");
+}
+
+/* ---------- poppins ---------- */
+@font-face {
+  font-family: "poppins";
+  font-weight: 900;
+  src: url("../../fonts/poppins/Poppins-Black.woff2") format("woff2"), url("../../fonts/poppins/Poppins-Black.woff") format("woff"), url("../../fonts/poppins/Poppins-Black.ttf") format("truetype"), url("../../fonts/poppins/Poppins-Black.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "poppins";
+  font-weight: 800;
+  src: url("../../fonts/poppins/Poppins-ExtraBold.woff2") format("woff2"), url("../../fonts/poppins/Poppins-ExtraBold.woff") format("woff"), url("../../fonts/poppins/Poppins-ExtraBold.ttf") format("truetype"), url("../../fonts/poppins/Poppins-ExtraBold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "poppins";
+  font-weight: 700;
+  src: url("../../fonts/poppins/Poppins-Bold.woff2") format("woff2"), url("../../fonts/poppins/Poppins-Bold.woff") format("woff"), url("../../fonts/poppins/Poppins-Bold.ttf") format("truetype"), url("../../fonts/poppins/Poppins-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "poppins";
+  font-weight: 600;
+  src: url("../../fonts/poppins/Poppins-SemiBold.woff2") format("woff2"), url("../../fonts/poppins/Poppins-SemiBold.woff") format("woff"), url("../../fonts/poppins/Poppins-SemiBold.ttf") format("truetype"), url("../../fonts/poppins/Poppins-SemiBold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "poppins";
+  font-weight: 500;
+  src: url("../../fonts/poppins/Poppins-Medium.woff2") format("woff2"), url("../../fonts/poppins/Poppins-Medium.woff") format("woff"), url("../../fonts/poppins/Poppins-Medium.ttf") format("truetype"), url("../../fonts/poppins/Poppins-Medium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "poppins";
+  font-weight: 400;
+  src: url("../../fonts/poppins/Poppins-Regular.woff2") format("woff2"), url("../../fonts/poppins/Poppins-Regular.woff") format("woff"), url("../../fonts/poppins/Poppins-Regular.ttf") format("truetype"), url("../../fonts/poppins/Poppins-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "poppins";
+  font-weight: 300;
+  src: url("../../fonts/poppins/Poppins-Light.woff2") format("woff2"), url("../../fonts/poppins/Poppins-Light.woff") format("woff"), url("../../fonts/poppins/Poppins-Light.ttf") format("truetype"), url("../../fonts/poppins/Poppins-Light.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "poppins";
+  font-weight: 200;
+  src: url("../../fonts/poppins/Poppins-ExtraLight.woff2") format("woff2"), url("../../fonts/poppins/Poppins-ExtraLight.woff") format("woff"), url("../../fonts/poppins/Poppins-ExtraLight.ttf") format("truetype"), url("../../fonts/poppins/Poppins-ExtraLight.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "poppins";
+  font-weight: 100;
+  src: url("../../fonts/poppins/Poppins-Thin.woff2") format("woff2"), url("../../fonts/poppins/Poppins-Thin.woff") format("woff"), url("../../fonts/poppins/Poppins-Thin.ttf") format("truetype"), url("../../fonts/poppins/Poppins-Thin.otf") format("opentype");
+}
+
+/* =================== helper =================== */
+.none {
+  display: none;
+}
+
+.voice-only {
+  position: absolute;
+  top: 0;
+  left: -9999rem;
+  font-size: 0;
+}
+
+.ls-0 {
+  letter-spacing: 0;
+}
+
+.tab-show {
+  display: none;
+}
+
+@media all and (max-width: 900px) {
+  .tab-show {
+    display: block;
+  }
+}
+
+@media all and (max-width: 900px) {
+  .tab-hide {
+    display: none;
+  }
+}
+
+.mo-show {
+  display: none;
+}
+
+@media all and (max-width: 600px) {
+  .mo-show {
+    display: block;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .mo-hide {
+    display: none;
+  }
+}
+
+.mo-sm-show {
+  display: none;
+}
+
+@media all and (max-width: 360px) {
+  .mo-sm-show {
+    display: block;
+  }
+}
+
+@media all and (max-width: 360px) {
+  .mo-sm-hide {
+    display: none;
+  }
+}
+
+.mo-xsm-show {
+  display: none;
+}
+
+@media all and (max-width: 320px) {
+  .mo-xsm-show {
+    display: block;
+  }
+}
+
+@media all and (max-width: 320px) {
+  .mo-xsm-hide {
+    display: none;
+  }
+}
+
+/* =================== layout =================== */
+.l-center {
+  max-width: 1080px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.empty-content {
+  width: 100%;
+  text-align: center;
+  padding: 50px 0;
+}
+
+.empty-content__img-box {
+  width: 100px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+.empty-content__img-box img {
+  width: 100%;
+}
+
+.empty-content__txt {
+  font-weight: 400;
+  color: black;
+  opacity: 0.8;
+}
+
+/* =================== main =================== */

@@ -1,0 +1,293 @@
+// responsive Setting
+@mixin media-dv($device, $range: max) {
+  @media all and (#{$range}-width: device($device, "key")) {
+    @content;
+  }
+}
+
+// responsive custom Setting
+@mixin media($px, $range: max) {
+  @media all and (#{$range}-width: $px) {
+    @content;
+  }
+}
+
+// position: absolute
+@mixin absolute($t: 0, $l: 0, $b: null, $r: null) {
+  position: absolute;
+
+  @if $t {
+    top: if($b, auto, $t);
+    bottom: $b;
+
+    left: if($r, auto, $l);
+    right: if($l == 0 or $l, $r, $l);
+  }
+}
+
+// position: fixed
+@mixin fixed($t: 0, $l: 0, $b: null, $r: null) {
+  position: fixed;
+
+  @if $t {
+    top: if($b, auto, $t);
+    bottom: $b;
+
+    left: if($r, auto, $l);
+    right: if($l == 0 or $l, $r, $l);
+  }
+}
+
+// translate
+@mixin translate(
+  $t: 0,
+  $l: 0,
+  $b: null,
+  $x: null,
+  $y: null,
+  $x: null,
+  $y: null
+) {
+  position: absolute;
+
+  @if $t == 50% and $l == 50% {
+    @if $x and $y {
+      top: $t;
+      left: $l;
+      transform: translate($x, $y);
+    } @else if $x {
+      top: $t;
+      left: $l;
+      transform: translate($x, -50%);
+    } @else if $y {
+      top: $t;
+      left: $l;
+      transform: translate(-50%, $y);
+    } @else {
+      top: $t;
+      left: $l;
+      transform: translate(-50%, -50%);
+    }
+  } @else if $t == 50% or $l == 50% {
+    @if $t == 50% {
+      top: $t;
+      left: $l;
+      transform: if($y, translateY($y), translateY(-50%));
+    }
+
+    @if $l == 50% {
+      top: $t;
+      left: $l;
+      transform: if($x, translateX($x), translateX(-50%));
+    }
+  }
+}
+
+@mixin wh($w: null, $h: null) {
+  width: $w;
+  height: $h;
+}
+
+@mixin circle($size) {
+  @include wh($size, $size);
+
+  border-radius: 50%;
+  @content;
+}
+
+@mixin full {
+  width: 100%;
+  height: 100%;
+}
+
+@mixin flex($d: flex) {
+  display: $d;
+  @content;
+}
+
+@mixin flex-col($d: flex) {
+  display: $d;
+  flex-direction: column;
+  @content;
+}
+
+@mixin flex-op($ai: null, $jc: null) {
+  align-items: $ai;
+  justify-content: $jc;
+}
+
+@mixin flex-center {
+  @include flex {
+    @include flex-item-center;
+  }
+}
+
+@mixin flex-item-center {
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin bg-url($path, $img, $op-default: false, $op-p: null, $op-s: null) {
+  background-image: urlPath($path, $img);
+
+  @if ($op-default) {
+    @include bg-op;
+  }
+
+  @if $op-p and $op-s {
+    @include bg-op($p: $op-p, $s: $op-s);
+  } @else if $op-p {
+    @include bg-op($p: $op-p);
+  } @else if $op-s {
+    @include bg-op($s: $op-s);
+  }
+}
+
+@mixin bg-op($p: center, $s: cover, $r: no-repeat) {
+  background-position: $p;
+  background-size: $s;
+  background-repeat: $r;
+}
+
+@mixin font-op($c: null, $w: null, $ls: null) {
+  @content;
+
+  font-weight: $w;
+  color: $c;
+  letter-spacing: $ls;
+}
+
+@mixin make-before($c: "", $d: block) {
+  &:before {
+    content: $c;
+    display: $d;
+    @content;
+  }
+}
+
+@mixin make-after($c: "", $d: block) {
+  &:after {
+    content: $c;
+    display: $d;
+    @content;
+  }
+}
+
+@mixin transition-group {
+  /* 인터랙션 관련 스타일 */
+  @content;
+  /* END 인터랙션 관련 스타일 */
+}
+
+@mixin ie-style {
+  @at-root html.ie & {
+    @content;
+  }
+}
+
+@mixin input-reset {
+  border-radius: 0;
+  background-color: transparent;
+  border: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0;
+  outline: none;
+  box-shadow: none;
+}
+
+@mixin input-style(
+  $d: block,
+  $w: 100%,
+  $h: 54px,
+  $bd-wi: 1px,
+  $bd-st: solid,
+  $bd-cl: null,
+  $bd-rd: 6px,
+  $bg-color: white
+) {
+  display: $d;
+  width: $w;
+  height: $h;
+  border: $bd-wi $bd-st $bd-cl;
+  border-radius: $bd-rd;
+  padding: 0 17px;
+  background-color: $bg-color;
+  font-size: emSize(18);
+  @content;
+  &:focus {
+    border-color: color(main);
+  }
+  &::placeholder {
+    opacity: 0.7;
+  }
+}
+
+@mixin hover {
+  @include media(600px, min) {
+    &:hover {
+      @content;
+    }
+  }
+
+  &:focus {
+    @content;
+  }
+}
+
+@mixin ellipse($line-cnt, $line-height) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $line-cnt; // $line-cnt : 라인 수
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  line-height: $line-height; // $line-height : line-height값 (단위 필수)
+  height: $line-height * $line-cnt; /* line-height 가 1.2em 이고 3라인을 자르기 때문에 height는 1.2em * 3 = 3.6em */
+}
+
+// 아이폰 노치
+@mixin iPhoneXs {
+  /* iPhone XS : 2436x1125px at 458ppi */
+  @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+    @content;
+  }
+}
+
+@mixin iPhoneXr {
+  /* iPhone XR : 1792x828px at 326ppi */
+  @media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
+    @content;
+  }
+}
+
+@mixin iPhoneXsMax {
+  /* iPhone XS Max : 2688x1242px at 458ppi */
+  @media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
+    @content;
+  }
+}
+
+@mixin gra(
+  $deg: to left,
+  $start: color(main),
+  $st-per: 0%,
+  $end: color(sub),
+  $e-per: 100%
+) {
+  background: linear-gradient($deg, $start $st-per, $end $e-per);
+  color: white;
+}
+
+@mixin btn-gra($deg: to left, $start: color(main), $end: color(sub)) {
+  background: linear-gradient($deg, $start 0%, $end 50%, $start 100%);
+  background-size: 200%;
+  background-position: left top;
+  color: white;
+  transition: all 0.3s;
+
+  @include hover {
+    background-position-x: 100%;
+  }
+}

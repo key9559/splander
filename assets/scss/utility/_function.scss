@@ -1,0 +1,41 @@
+// color: color(text);
+@function color($color) {
+  @return map-get($color-set, $color);
+}
+
+// image url setting
+@function path($path) {
+  @return map-get($path-set, $path);
+}
+
+@function urlPath($pathName, $img) {
+  @return url(path($pathName)+$img);
+}
+
+// z Index setting
+@function z($layer) {
+  @return map-get($zIndex-set, $layer);
+}
+
+// responsive setting
+@function device($device, $arg) {
+  $device-value: map-get($breakpoints, $device);
+  $device-px: map-keys($device-value);
+  $device-desc: map-values($device-value);
+
+  @if ($arg=="key") {
+    @return $device-px;
+  }
+
+  @else if($arg=="value") {
+    @return $device-desc;
+  }
+}
+
+$base-size: 16;
+
+@function rem($target, $context: $base-size) {
+  @return ($target / $context) * 1rem;
+}
+
+// ex: @include cem(16, 30);

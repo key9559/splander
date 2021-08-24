@@ -1,0 +1,70 @@
+/* =================== helper =================== */
+// 노출되지 않을 영역
+.none {
+  display: none;
+}
+
+// 보이진 않지만 리딩되는 영역
+.voice-only {
+  @include absolute($l: -9999rem);
+
+  font-size: 0;
+}
+
+// 영어, 숫자만 있는 콘텐츠
+.ls-0 {
+  letter-spacing: 0;
+}
+
+// 브라우저 크기별 레이아웃 보이기
+.tab-show {
+  display: none;
+  @include media-dv(tab) {
+    display: block;
+  }
+}
+
+.tab-hide {
+  @include media-dv(tab) {
+    display: none;
+  }
+}
+
+.mo-show {
+  display: none;
+  @include media-dv(mb) {
+    display: block;
+  }
+}
+
+.mo-hide {
+  @include media-dv(mb) {
+    display: none;
+  }
+}
+
+.mo-sm-show {
+  display: none;
+  @include media(360px) {
+    display: block;
+  }
+}
+
+.mo-sm-hide {
+  @include media(360px) {
+    display: none;
+  }
+}
+
+.mo-xsm-show {
+  display: none;
+  @include media(320px) {
+    display: block;
+  }
+}
+
+.mo-xsm-hide {
+  @include media(320px) {
+    display: none;
+  }
+}

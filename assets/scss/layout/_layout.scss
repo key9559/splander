@@ -1,0 +1,29 @@
+/* =================== layout =================== */
+.l-center {
+  max-width: 1080px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+// empty content
+.empty-content {
+  width: 100%;
+  text-align: center;
+  padding: 50px 0;
+
+  &__img-box {
+    width: 100px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__txt {
+    font-weight: 400;
+    color: color(text);
+    opacity: 0.8;
+  }
+}
