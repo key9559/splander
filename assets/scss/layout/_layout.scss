@@ -1,29 +1,15 @@
 /* =================== layout =================== */
+#page {
+  max-width: 1920px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding-top: 50px;
+  background-color: #fcfcfc;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.08);
+}
+
 .l-center {
   max-width: 1080px;
   width: 95%;
   margin: 0 auto;
-}
-
-// empty content
-.empty-content {
-  width: 100%;
-  text-align: center;
-  padding: 50px 0;
-
-  &__img-box {
-    width: 100px;
-    margin: 0 auto;
-    padding-bottom: 20px;
-
-    img {
-      width: 100%;
-    }
-  }
-
-  &__txt {
-    font-weight: 400;
-    color: color(text);
-    opacity: 0.8;
-  }
 }

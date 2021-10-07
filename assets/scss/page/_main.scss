@@ -1,1 +1,30 @@
 /* =================== main =================== */
+// main title
+.board-ttl {
+  margin-bottom: 20px;
+  font-size: rem(24);
+  font-weight: 600;
+  text-align: center;
+}
+
+// main board
+.room-list-wrap {
+  box-shadow: 0 5px 13px rgba(0, 0, 0, 0.08);
+  padding: 10px;
+}
+
+.room-list {
+  padding: 3px 0;
+  border-top: 1px solid #999;
+
+  &:first-child {
+    border-top: 0 none;
+  }
+
+  .link {
+    @include flex {
+      @include flex-side;
+    }
+    padding: 7px 10px;
+  }
+}

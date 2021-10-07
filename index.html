@@ -65,25 +65,30 @@
   <div id="app">
     <div class="wrap">
       <div id="page" class="main">
-        <!-- content area -->
-        <h1>방목록</h1>
-        <ul class="room-list-wrapper">
-          <li class="room-list splander">
-            <!-- <img src="" alt="스플랜더 이미지" /> -->
-            <span class="type">스플랜더 - 대도시</span>
-            <span class="player">3 / 4</span>
-          </li>
-          <li class="room-list splander">
-            <!-- <img src="" alt="스플랜더 이미지" /> -->
-            <span class="type">스플랜더</span>
-            <span class="player">2 / 4</span>
-          </li>
-          <li class="room-list splander">
-            <!-- <img src="" alt="스플랜더 이미지" /> -->
-            <span class="type">스플랜더 - 성채</span>
-            <span class="player">1 / 4</span>
-          </li>
-        </ul>
+        <div class="l-center">
+          <!-- content area -->
+          <h1 class="board-ttl">게임방</h1>
+          <ul class="room-list-wrap">
+            <li class="room-list splander">
+              <a href="" class="link" onclick="alert('방이 꽉 참')">
+                <span class="type">스플랜더 - 대도시</span>
+                <span class="player">4 / 4</span>
+              </a>
+            </li>
+            <li class="room-list splander">
+              <a href="splander.html" class="link">
+                <span class="type">스플랜더</span>
+                <span class="player">3 / 4</span>
+              </a>
+            </li>
+            <li class="room-list splander">
+              <a href="" class="link" onclick="alert('게임중')">
+                <span class="type">스플랜더 - 성채</span>
+                <span class="player">3 / 4</span>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
       <!-- END page -->
     </div>

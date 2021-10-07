@@ -1,10 +1,12 @@
 // gray color는 따로 사용하고, red등의 컬러 추가해서 사용
-$color-set: (main: lightblue,
+$color-set: (
+  main: lightblue,
   sub: pink,
   text: black,
 );
 
-$zIndex-set: (popup: 100,
+$zIndex-set: (
+  popup: 100,
   fixed: 20,
   header: 10,
   double: 2,
@@ -13,16 +15,21 @@ $zIndex-set: (popup: 100,
   minus: -1,
 );
 
-$path-set: (icon: "../images/icon/",
+$path-set: (
+  icon: "../images/icon/",
   img: "../images/img/",
   logo: "../images/logo/",
   object: "../images/object/",
 );
 
-$breakpoints: (mb: (600px: "모바일",
+$breakpoints: (
+  mb: (
+    600px: "모바일",
   ),
-  tab: (900px: "태블릿",
+  tab: (
+    900px: "태블릿",
   ),
-  web: (1200px: "웹",
+  web: (
+    1200px: "웹",
   ),
 );

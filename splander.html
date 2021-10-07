@@ -64,96 +64,348 @@
 <body>
   <div id="app">
     <div class="wrap">
-      <div id="page" class="splander">
-        <!-- content area -->
-        <h2 class="sub-ttl">스플랜더 - 대도시</h2>
-        <div class="players-wrap">
-          <ul class="player-list-wrap">
-            <li class="player-list">
-              <span class="num">player 1</span>
-              <div class="player-field">
-                <div class="coin-wrap">
-                  <div class="coin red">1</div>
-                  <div class="coin blue">1</div>
-                  <div class="coin white">1</div>
-                  <div class="coin black">3</div>
-                  <div class="coin green">2</div>
-                  <div class="coin gold">0</div>
+      <div id="page" class="splander-origin">
+        <div class="l-center">
+          <!-- content area -->
+          <h2 class="sub-ttl">스플랜더</h2>
+          <div class="play-board-wrap">
+            <div class="board-field">
+              <div class="-wrap">
+                <div class="noble noble1">
+                  <div class="point">4</div>
+                  <div class="have">
+                    <!-- TODO: 0일 때 안보이기 -->
+                    <div class="coin red">1</div>
+                    <div class="coin blue">1</div>
+                    <div class="coin white">1</div>
+                    <div class="coin black">0</div>
+                    <div class="coin green">0</div>
+                  </div>
                 </div>
-                <div class="card-wrap">
-                  <div class="card keep-card">1</div>
-                  <div class="card red-card">1</div>
-                  <div class="card blue-card">3</div>
-                  <div class="card white-card">5</div>
-                  <div class="card black-card">0</div>
-                  <div class="card green-card">0</div>
+                <div class="noble noble2">
+                  <div class="point">4</div>
+                  <div class="have">
+                    <!-- TODO: 0일 때 안보이기 -->
+                    <div class="coin red">1</div>
+                    <div class="coin blue">1</div>
+                    <div class="coin white">1</div>
+                    <div class="coin black">0</div>
+                    <div class="coin green">0</div>
+                  </div>
                 </div>
-              </div>
-            </li>
-            <li class="player-list">
-              <span class="num">player 2</span>
-              <div class="player-field">
-                <div class="coin-wrap">
-                  <div class="coin red">1</div>
-                  <div class="coin blue">1</div>
-                  <div class="coin white">1</div>
-                  <div class="coin black">3</div>
-                  <div class="coin green">2</div>
-                  <div class="coin gold">0</div>
-                </div>
-                <div class="card-wrap">
-                  <div class="card keep-card">1</div>
-                  <div class="card red-card">1</div>
-                  <div class="card blue-card">3</div>
-                  <div class="card white-card">5</div>
-                  <div class="card black-card">0</div>
-                  <div class="card green-card">0</div>
+                <div class="noble noble3">
+                  <div class="point">4</div>
+                  <div class="have">
+                    <!-- TODO: 0일 때 안보이기 -->
+                    <div class="coin red">1</div>
+                    <div class="coin blue">1</div>
+                    <div class="coin white">1</div>
+                    <div class="coin black">0</div>
+                    <div class="coin green">0</div>
+                  </div>
                 </div>
               </div>
-            </li>
-            <li class="player-list">
-              <span class="num">player 3</span>
-              <div class="player-field">
-                <div class="coin-wrap">
-                  <div class="coin red">1</div>
-                  <div class="coin blue">1</div>
-                  <div class="coin white">1</div>
-                  <div class="coin black">3</div>
-                  <div class="coin green">2</div>
-                  <div class="coin gold">0</div>
+              <div class="card-wrap">
+                <div class="card-lv1">
+                  <div class="card card-dummy">뒷면</div>
+                  <div class="card">
+                    <div class="top-conts">
+                      <!-- TODO: red, blue, white, black, green -->
+                      <div class="card-color red"></div>
+                      <!-- TODO: 0일 때 안보이기 -->
+                      <div class="point">2</div>
+                    </div>
+                    <div class="pay-conts">
+                      <!-- TODO: 0일 때 안보이기 -->
+                      <div class="coin red">1</div>
+                      <div class="coin blue">1</div>
+                      <div class="coin white">1</div>
+                      <div class="coin black">0</div>
+                      <div class="coin green">0</div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="top-conts">
+                      <!-- TODO: red, blue, white, black, green -->
+                      <div class="card-color red"></div>
+                      <!-- TODO: 0일 때 안보이기 -->
+                      <div class="point">2</div>
+                    </div>
+                    <div class="pay-conts">
+                      <!-- TODO: 0일 때 안보이기 -->
+                      <div class="coin red">1</div>
+                      <div class="coin blue">1</div>
+                      <div class="coin white">1</div>
+                      <div class="coin black">0</div>
+                      <div class="coin green">0</div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="top-conts">
+                      <!-- TODO: red, blue, white, black, green -->
+                      <div class="card-color red"></div>
+                      <!-- TODO: 0일 때 안보이기 -->
+                      <div class="point">2</div>
+                    </div>
+                    <div class="pay-conts">
+                      <!-- TODO: 0일 때 안보이기 -->
+                      <div class="coin red">1</div>
+                      <div class="coin blue">1</div>
+                      <div class="coin white">1</div>
+                      <div class="coin black">0</div>
+                      <div class="coin green">0</div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="top-conts">
+                      <!-- TODO: red, blue, white, black, green -->
+                      <div class="card-color red"></div>
+                      <!-- TODO: 0일 때 안보이기 -->
+                      <div class="point">2</div>
+                    </div>
+                    <div class="pay-conts">
+                      <!-- TODO: 0일 때 안보이기 -->
+                      <div class="coin red">1</div>
+                      <div class="coin blue">1</div>
+                      <div class="coin white">1</div>
+                      <div class="coin black">0</div>
+                      <div class="coin green">0</div>
+                    </div>
+                  </div>
                 </div>
-                <div class="card-wrap">
-                  <div class="card keep-card">1</div>
-                  <div class="card red-card">1</div>
-                  <div class="card blue-card">3</div>
-                  <div class="card white-card">5</div>
-                  <div class="card black-card">0</div>
-                  <div class="card green-card">0</div>
+                <div class="card-lv2">
+                  <div class="card card-dummy">뒷면</div>
+                  <div class="card">
+                    <div class="top-conts">
+                      <!-- TODO: red, blue, white, black, green -->
+                      <div class="card-color red"></div>
+                      <!-- TODO: 0일 때 안보이기 -->
+                      <div class="point">2</div>
+                    </div>
+                    <div class="pay-conts">
+                      <!-- TODO: 0일 때 안보이기 -->
+                      <div class="coin red">1</div>
+                      <div class="coin blue">1</div>
+                      <div class="coin white">1</div>
+                      <div class="coin black">0</div>
+                      <div class="coin green">0</div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="top-conts">
+                      <!-- TODO: red, blue, white, black, green -->
+                      <div class="card-color red"></div>
+                      <!-- TODO: 0일 때 안보이기 -->
+                      <div class="point">2</div>
+                    </div>
+                    <div class="pay-conts">
+                      <!-- TODO: 0일 때 안보이기 -->
+                      <div class="coin red">1</div>
+                      <div class="coin blue">1</div>
+                      <div class="coin white">1</div>
+                      <div class="coin black">0</div>
+                      <div class="coin green">0</div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="top-conts">
+                      <!-- TODO: red, blue, white, black, green -->
+                      <div class="card-color red"></div>
+                      <!-- TODO: 0일 때 안보이기 -->
+                      <div class="point">2</div>
+                    </div>
+                    <div class="pay-conts">
+                      <!-- TODO: 0일 때 안보이기 -->
+                      <div class="coin red">1</div>
+                      <div class="coin blue">1</div>
+                      <div class="coin white">1</div>
+                      <div class="coin black">0</div>
+                      <div class="coin green">0</div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="top-conts">
+                      <!-- TODO: red, blue, white, black, green -->
+                      <div class="card-color red"></div>
+                      <!-- TODO: 0일 때 안보이기 -->
+                      <div class="point">2</div>
+                    </div>
+                    <div class="pay-conts">
+                      <!-- TODO: 0일 때 안보이기 -->
+                      <div class="coin red">1</div>
+                      <div class="coin blue">1</div>
+                      <div class="coin white">1</div>
+                      <div class="coin black">0</div>
+                      <div class="coin green">0</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-lv3">
+                  <div class="card card-dummy">뒷면</div>
+                  <div class="card">
+                    <div class="top-conts">
+                      <!-- TODO: red, blue, white, black, green -->
+                      <div class="card-color red"></div>
+                      <!-- TODO: 0일 때 안보이기 -->
+                      <div class="point">2</div>
+                    </div>
+                    <div class="pay-conts">
+                      <!-- TODO: 0일 때 안보이기 -->
+                      <div class="coin red">1</div>
+                      <div class="coin blue">1</div>
+                      <div class="coin white">1</div>
+                      <div class="coin black">0</div>
+                      <div class="coin green">0</div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="top-conts">
+                      <!-- TODO: red, blue, white, black, green -->
+                      <div class="card-color red"></div>
+                      <!-- TODO: 0일 때 안보이기 -->
+                      <div class="point">2</div>
+                    </div>
+                    <div class="pay-conts">
+                      <!-- TODO: 0일 때 안보이기 -->
+                      <div class="coin red">1</div>
+                      <div class="coin blue">1</div>
+                      <div class="coin white">1</div>
+                      <div class="coin black">0</div>
+                      <div class="coin green">0</div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="top-conts">
+                      <!-- TODO: red, blue, white, black, green -->
+                      <div class="card-color red"></div>
+                      <!-- TODO: 0일 때 안보이기 -->
+                      <div class="point">2</div>
+                    </div>
+                    <div class="pay-conts">
+                      <!-- TODO: 0일 때 안보이기 -->
+                      <div class="coin red">1</div>
+                      <div class="coin blue">1</div>
+                      <div class="coin white">1</div>
+                      <div class="coin black">0</div>
+                      <div class="coin green">0</div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="top-conts">
+                      <!-- TODO: red, blue, white, black, green -->
+                      <div class="card-color red"></div>
+                      <!-- TODO: 0일 때 안보이기 -->
+                      <div class="point">2</div>
+                    </div>
+                    <div class="pay-conts">
+                      <!-- TODO: 0일 때 안보이기 -->
+                      <div class="coin red">1</div>
+                      <div class="coin blue">1</div>
+                      <div class="coin white">1</div>
+                      <div class="coin black">0</div>
+                      <div class="coin green">0</div>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </li>
-            <li class="player-list">
-              <span class="num">player 4</span>
-              <div class="player-field">
-                <div class="coin-wrap">
-                  <div class="coin red">1</div>
-                  <div class="coin blue">1</div>
-                  <div class="coin white">1</div>
-                  <div class="coin black">3</div>
-                  <div class="coin green">2</div>
-                  <div class="coin gold">0</div>
-                </div>
-                <div class="card-wrap">
-                  <div class="card keep-card">1</div>
-                  <div class="card red-card">1</div>
-                  <div class="card blue-card">3</div>
-                  <div class="card white-card">5</div>
-                  <div class="card black-card">0</div>
-                  <div class="card green-card">0</div>
-                </div>
+              <div class="coin-wrap">
+                <div class="coin red">1</div>
+                <div class="coin blue">1</div>
+                <div class="coin white">1</div>
+                <div class="coin black">3</div>
+                <div class="coin green">2</div>
+                <div class="coin gold">0</div>
               </div>
-            </li>
-          </ul>
+            </div>
+          </div>
+          <div class="players-wrap">
+            <ul class="player-list-wrap">
+              <li class="player-list">
+                <span class="num">player 1</span>
+                <div class="player-field">
+                  <div class="coin-wrap">
+                    <div class="coin red">1</div>
+                    <div class="coin blue">1</div>
+                    <div class="coin white">1</div>
+                    <div class="coin black">3</div>
+                    <div class="coin green">2</div>
+                    <div class="coin gold">0</div>
+                  </div>
+                  <div class="card-wrap">
+                    <div class="card keep">1</div>
+                    <div class="card red">1</div>
+                    <div class="card blue">3</div>
+                    <div class="card white">5</div>
+                    <div class="card black">0</div>
+                    <div class="card green">0</div>
+                  </div>
+                </div>
+              </li>
+              <li class="player-list">
+                <span class="num">player 2</span>
+                <div class="player-field">
+                  <div class="coin-wrap">
+                    <div class="coin red">1</div>
+                    <div class="coin blue">1</div>
+                    <div class="coin white">1</div>
+                    <div class="coin black">3</div>
+                    <div class="coin green">2</div>
+                    <div class="coin gold">0</div>
+                  </div>
+                  <div class="card-wrap">
+                    <div class="card keep">1</div>
+                    <div class="card red">1</div>
+                    <div class="card blue">3</div>
+                    <div class="card white">5</div>
+                    <div class="card black">0</div>
+                    <div class="card green">0</div>
+                  </div>
+                </div>
+              </li>
+              <li class="player-list">
+                <span class="num">player 3</span>
+                <div class="player-field">
+                  <div class="coin-wrap">
+                    <div class="coin red">1</div>
+                    <div class="coin blue">1</div>
+                    <div class="coin white">1</div>
+                    <div class="coin black">3</div>
+                    <div class="coin green">2</div>
+                    <div class="coin gold">0</div>
+                  </div>
+                  <div class="card-wrap">
+                    <div class="card keep">1</div>
+                    <div class="card red">1</div>
+                    <div class="card blue">3</div>
+                    <div class="card white">5</div>
+                    <div class="card black">0</div>
+                    <div class="card green">0</div>
+                  </div>
+                </div>
+              </li>
+              <li class="player-list">
+                <span class="num">player 4</span>
+                <div class="player-field">
+                  <div class="coin-wrap">
+                    <div class="coin red">1</div>
+                    <div class="coin blue">1</div>
+                    <div class="coin white">1</div>
+                    <div class="coin black">3</div>
+                    <div class="coin green">2</div>
+                    <div class="coin gold">0</div>
+                  </div>
+                  <div class="card-wrap">
+                    <div class="card keep">1</div>
+                    <div class="card red">1</div>
+                    <div class="card blue">3</div>
+                    <div class="card white">5</div>
+                    <div class="card black">0</div>
+                    <div class="card green">0</div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       <!-- END page -->

@@ -5,6 +5,18 @@
   }
 }
 
+@mixin mobile {
+  @include media-dv(mb) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @include media-dv(tab) {
+    @content;
+  }
+}
+
 // responsive custom Setting
 @mixin media($px, $range: max) {
   @media all and (#{$range}-width: $px) {
@@ -38,51 +50,7 @@
   }
 }
 
-// translate
-@mixin translate(
-  $t: 0,
-  $l: 0,
-  $b: null,
-  $x: null,
-  $y: null,
-  $x: null,
-  $y: null
-) {
-  position: absolute;
-
-  @if $t == 50% and $l == 50% {
-    @if $x and $y {
-      top: $t;
-      left: $l;
-      transform: translate($x, $y);
-    } @else if $x {
-      top: $t;
-      left: $l;
-      transform: translate($x, -50%);
-    } @else if $y {
-      top: $t;
-      left: $l;
-      transform: translate(-50%, $y);
-    } @else {
-      top: $t;
-      left: $l;
-      transform: translate(-50%, -50%);
-    }
-  } @else if $t == 50% or $l == 50% {
-    @if $t == 50% {
-      top: $t;
-      left: $l;
-      transform: if($y, translateY($y), translateY(-50%));
-    }
-
-    @if $l == 50% {
-      top: $t;
-      left: $l;
-      transform: if($x, translateX($x), translateX(-50%));
-    }
-  }
-}
-
+// size
 @mixin wh($w: null, $h: null) {
   width: $w;
   height: $h;
@@ -116,15 +84,12 @@
   justify-content: $jc;
 }
 
-@mixin flex-center {
-  @include flex {
-    @include flex-item-center;
-  }
+@mixin flex-side {
+  @include flex-op(center, space-between);
 }
 
-@mixin flex-item-center {
-  align-items: center;
-  justify-content: center;
+@mixin flex-center {
+  @include flex-op(center, center);
 }
 
 @mixin bg-url($path, $img, $op-default: false, $op-p: null, $op-s: null) {

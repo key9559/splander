@@ -11,59 +11,54 @@
   font-size: 0;
 }
 
-// 영어, 숫자만 있는 콘텐츠
-.ls-0 {
-  letter-spacing: 0;
-}
-
 // 브라우저 크기별 레이아웃 보이기
 .tab-show {
   display: none;
-  @include media-dv(tab) {
+  @include tablet {
     display: block;
   }
 }
 
 .tab-hide {
-  @include media-dv(tab) {
+  @include tablet {
     display: none;
   }
 }
 
-.mo-show {
+.mb-show {
   display: none;
-  @include media-dv(mb) {
+  @include mobile {
     display: block;
   }
 }
 
-.mo-hide {
-  @include media-dv(mb) {
+.mb-hide {
+  @include mobile {
     display: none;
   }
 }
 
-.mo-sm-show {
+.sm-show {
   display: none;
   @include media(360px) {
     display: block;
   }
 }
 
-.mo-sm-hide {
+.sm-hide {
   @include media(360px) {
     display: none;
   }
 }
 
-.mo-xsm-show {
+.xsm-show {
   display: none;
   @include media(320px) {
     display: block;
   }
 }
 
-.mo-xsm-hide {
+.xsm-hide {
   @include media(320px) {
     display: none;
   }
