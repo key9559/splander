@@ -85,10 +85,12 @@
 }
 
 @mixin flex-side {
+  @include flex;
   @include flex-op(center, space-between);
 }
 
 @mixin flex-center {
+  @include flex;
   @include flex-op(center, center);
 }
 

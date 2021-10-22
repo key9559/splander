@@ -1,8 +1,11 @@
 // gray color는 따로 사용하고, red등의 컬러 추가해서 사용
 $color-set: (
-  main: lightblue,
-  sub: pink,
-  text: black,
+  text: #333,
+  red: #fd2422,
+  blue: #2c5dc8,
+  black: #201d20,
+  green: #018b55,
+  gold: #ffd700,
 );
 
 $zIndex-set: (
@@ -16,10 +19,8 @@ $zIndex-set: (
 );
 
 $path-set: (
-  icon: "../images/icon/",
-  img: "../images/img/",
-  logo: "../images/logo/",
-  object: "../images/object/",
+  icon: "../../images/icon/",
+  img: "../../images/img/",
 );
 
 $breakpoints: (
