@@ -459,14 +459,13 @@ table {
 }
 
 .room-list-wrap {
-  -webkit-box-shadow: 0 5px 13px rgba(0, 0, 0, 0.08);
-          box-shadow: 0 5px 13px rgba(0, 0, 0, 0.08);
   padding: 10px;
+  background-color: #f9f9f9;
 }
 
 .room-list {
-  padding: 3px 0;
-  border-top: 1px solid #999;
+  margin: 10px 0;
+  background-color: white;
 }
 
 .room-list:first-child {
@@ -483,5 +482,12 @@ table {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 7px 10px;
+  padding: 15px 10px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.room-list .link:hover, .room-list .link:focus {
+  -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
 }
