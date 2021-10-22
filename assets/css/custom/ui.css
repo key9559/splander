@@ -443,17 +443,17 @@ table {
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url("../../images/img/bg_coin.png");
-  border: 1px solid #ddd;
   font-size: 1.25rem;
   font-weight: 600;
+  text-shadow: 1px 0 0 rgba(255, 255, 255, 0.35), 0 1px 0 rgba(255, 255, 255, 0.35), -1px 0 0 rgba(255, 255, 255, 0.35), 0 -1px 0 rgba(255, 255, 255, 0.35);
 }
 
 .red {
-  color: #fd2422;
+  color: #e01e1b;
 }
 
 .blue {
-  color: #2c5dc8;
+  color: #4982fd;
 }
 
 .white {
@@ -465,7 +465,7 @@ table {
 }
 
 .green {
-  color: #018b55;
+  color: #12b342;
 }
 
 .gold {
@@ -516,3 +516,109 @@ table {
 }
 
 /* =================== splander =================== */
+.splander .noble_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.splander .noble_wrap .noble {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 33.333%;
+          flex: 1 1 33.333%;
+}
+
+.splander .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  padding: 20px;
+}
+
+.splander .card .top_conts {
+  width: 100%;
+}
+
+.splander .card .card_color {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.3;
+}
+
+.splander .card .card_color.red {
+  background-color: #e01e1b;
+}
+
+.splander .card .card_color.blue {
+  background-color: #4982fd;
+}
+
+.splander .card .card_color.green {
+  background-color: #12b342;
+}
+
+.splander .card .card_color.black {
+  background-color: #201d20;
+}
+
+.splander .card .card_color.white {
+  background-color: #fefefe;
+}
+
+.splander .card .pay_conts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  z-index: 1;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 0px 3px;
+}
+
+.splander .card .pay_conts .coin {
+  width: 40px;
+  height: 40px;
+}
+
+.splander .point {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  font-size: 1.875rem;
+  font-weight: 600;
+}

@@ -1,1 +1,78 @@
 /* =================== splander =================== */
+.splander {
+  .noble_wrap {
+    @include flex;
+
+    .noble {
+      @include flex-col {
+        @include flex-op(center, space-between);
+      }
+
+      flex: 1 1 33.333%;
+    }
+  }
+
+  .card {
+    @include flex-col {
+      @include flex-op(center, space-between);
+    }
+
+    position: relative;
+    padding: 20px;
+
+    .top_conts {
+      width: 100%;
+    }
+
+    .card_color {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      opacity: 0.3;
+
+      &.red {
+        background-color: color(red);
+      }
+
+      &.blue {
+        background-color: color(blue);
+      }
+
+      &.green {
+        background-color: color(green);
+      }
+
+      &.black {
+        background-color: color(black);
+      }
+
+      &.white {
+        background-color: #fefefe;
+      }
+    }
+
+    .pay_conts {
+      @include flex-center;
+
+      position: relative;
+      z-index: 1;
+      flex-wrap: wrap;
+      gap: 0px 3px;
+
+      .coin {
+        @include wh(40px, 40px);
+      }
+    }
+  }
+
+  .point {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    font-size: rem(30);
+    font-weight: 600;
+  }
+}
