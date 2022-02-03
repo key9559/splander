@@ -1,0 +1,10 @@
+FROM node:13
+RUN mkdir /web
+WORKDIR /web
+
+COPY . .
+
+RUN npm install
+
+VOLUME '/web'
+CMD ["npm", "run", "serve"]

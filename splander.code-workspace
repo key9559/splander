@@ -1,28 +1,50 @@
 {
-	"folders": [
-	  {
-		"path": "."
-	  }
-	],
-	"settings": {
-	  "eslint.format.enable": true,
-	  "eslint.lintTask.enable": true,
-	  "editor.formatOnSave": true,
-	  "liveSassCompile.settings.autoprefix": ["> 1%", "last 2 versions"],
-	  "liveSassCompile.settings.formats": [
-		{
-		  "format": "expanded",
-		  "extensionName": ".css",
-		  "savePath": "/assets/css/custom"
-		}
-	  ],
-	  "editor.tabSize": 2,
-	  "liveSassCompile.settings.generateMap": false,
-	  "liveSassCompile.settings.excludeList": [
-		"**/node_modules/**",
-		".vscode/**"
-	  ],
-	  "liveServer.settings.port": 5501
-	}
+  "folders": [
+    {
+      "path": ".",
+      "exclude": ["node_modules"]
+    }
+  ],
+  "settings": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "eslint.validate": ["javascript", "vue"],
+    "eslint.format.enable": true,
+    "eslint.alwaysShowStatus": true,
+    "eslint.lintTask.enable": true,
+    "editor.tabSize": 2,
+    "vetur.format.enable": true,
+    "vetur.format.defaultFormatter.html": "none",
+    "vetur.format.defaultFormatter.js": "none",
+    "vetur.format.defaultFormatter.css": "prettier",
+    "vetur.format.defaultFormatter.scss": "prettier",
+    "vetur.format.options.tabSize": 2,
+    "vetur.completion.autoImport": false,
+    "git.autorefresh": true,
+    "files.eol": "\r\n",
+    // live sass compiler setting
+    "liveSassCompile.settings.autoprefix": ["> 1%", "last 2 versions"],
+    "liveSassCompile.settings.formats": [
+      {
+        "format": "expanded",
+        "extensionName": ".css",
+        "savePath": "/public/temp-pub/css"
+      }
+    ],
+    "liveSassCompile.settings.generateMap": false,
+    "[vue]": {
+      "editor.defaultFormatter": "octref.vetur"
+    },
+    "[javascript]": {
+      "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "json.schemas": [
+      {
+        "$schema": "https://json.schemastore.org/jsconfig"
+      }
+    ]
   }
-  
+}
