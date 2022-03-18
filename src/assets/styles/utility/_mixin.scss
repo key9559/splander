@@ -190,6 +190,30 @@
   }
 }
 
+// gradient
+@mixin gra(
+  $deg: to left,
+  $start: color(main),
+  $st-per: 0%,
+  $end: color(sub),
+  $e-per: 100%
+) {
+  background: linear-gradient($deg, $start $st-per, $end $e-per);
+  color: white;
+}
+
+@mixin btn-gra($deg: to left, $start: color(main), $end: color(sub)) {
+  background: linear-gradient($deg, $start 0%, $end 50%, $start 100%);
+  background-size: 200%;
+  background-position: left top;
+  color: white;
+  transition: all 0.3s;
+
+  @include hover {
+    background-position-x: 100%;
+  }
+}
+
 // scroll custom style
 @mixin custom-scroll($c: null, $sub-c: #fff, $r: 0, $w: 4px) {
   &::-webkit-scrollbar {

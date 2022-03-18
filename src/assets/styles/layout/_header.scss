@@ -2,113 +2,8 @@
 .pk-header {
   @include fixed($t: 0, $l: 50%);
 
-  max-width: 500px;
+  max-width: $ct-width;
   transform: translateX(-50%);
-
-  &.type1 {
-    .hd-ttl {
-      display: none !important;
-    }
-
-    .btn-alert {
-      display: none !important;
-    }
-
-    .btn-edit-grp {
-      display: none !important;
-    }
-  }
-
-  &.type2 {
-    .hd-logo {
-      position: absolute;
-      left: 20px;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-
-    .hd-ttl {
-      display: none !important;
-    }
-
-    .btn-edit-grp {
-      display: none !important;
-    }
-
-    .btn-back {
-      display: none !important;
-    }
-  }
-
-  &.type3 {
-    .hd-logo {
-      display: none !important;
-    }
-
-    .hd-ttl {
-      display: none !important;
-    }
-
-    .btn-alert {
-      display: none !important;
-    }
-
-    .btn-edit-grp {
-      display: none !important;
-    }
-  }
-
-  &.type4 {
-    .hd-logo {
-      display: none !important;
-    }
-
-    .hd-ttl {
-      display: none !important;
-    }
-
-    .btn-alert {
-      display: none !important;
-    }
-  }
-
-  &.type5 {
-    .hd-logo {
-      display: none !important;
-    }
-
-    .btn-alert {
-      display: none !important;
-    }
-
-    .btn-edit-grp {
-      display: none !important;
-    }
-  }
-
-  &.type6 {
-    background-color: transparent;
-
-    .hd-logo {
-      display: none !important;
-    }
-
-    .hd-ttl {
-      display: none !important;
-    }
-
-    .btn-alert {
-      display: none !important;
-    }
-
-    .btn-edit-grp {
-      display: none !important;
-    }
-
-    ~ .page-container {
-      padding-top: 0;
-    }
-  }
 
   z-index: 20;
   width: 100%;
@@ -130,66 +25,15 @@
       top: 0;
     }
 
-    .btn-alert {
-      position: absolute;
-      left: auto;
-      right: 5px;
-      top: 0;
-
-      &.is-new {
-        &::after {
-          display: inline-block;
-        }
-      }
-
-      &::after {
-        content: "";
-        display: none;
-        position: absolute;
-        left: auto;
-        right: 14px;
-        top: 12px;
-        width: 7px;
-        height: 7px;
-        background-color: color(main);
-        border-radius: 50%;
-        border: 1px solid #fff;
-      }
-    }
-
-    .btn-edit-grp {
-      position: absolute;
-      left: auto;
-      right: 10px;
-      top: 0;
-      display: flex;
-      align-items: center;
-
-      .btn-hd-icon {
-        width: 40px;
-      }
-    }
-
     .hd-ttl {
       font-size: rem(18);
       font-weight: 500;
     }
   }
 
-  .hd-logo {
-    width: 158px;
-
-    .link {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      height: 100%;
-    }
-
-    .logo-img {
-      object-fit: contain;
-      width: 100%;
+  &.type1 {
+    .btn-back {
+      display: none !important;
     }
   }
 }

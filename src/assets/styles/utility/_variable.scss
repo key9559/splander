@@ -35,6 +35,8 @@ $breakpoints: (
   ),
 );
 
+$ct-width: 1300px;
+
 // button & badge
 // btn 높이 추가하면 .btn-ht-크기 가 추가된다.
 $btn-height: (
@@ -44,11 +46,5 @@ $btn-height: (
 // btn color 추가하면 .btn-색이름 .btn-bd-색이름 .btn-gst-색이름 이 추가된다.
 $btn-color: (
   main: #{color(main)},
-);
-
-// .btn-소셜이름 이 추가된다.
-$socail: (
-  kakao: #fae300,
-  // 추후 색 설정
-  apple: #000,
+  sub: #{color(sub)},
 );

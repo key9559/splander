@@ -3,7 +3,11 @@
     id="page"
     class="page main-page"
   >
-    asd
+    <layout-header
+      hd-title="게시판"
+      hd-type="type1"
+    />
+    <div class="l-center" />
   </div>
 </template>
 

@@ -12,62 +12,40 @@
             1. 버튼
           </h1>
           <div class="section-cont">
+            <!-- icon button -->
             <div class="btn-grp">
               <button
                 type="button"
-                class="btn btn-main btn-rounded btn-md btn-full"
+                class="btn btn-icon btn-back"
+                onclick="history.go(-1);"
               >
-                로그인하기
+                뒤로가기
+                <i class="icon icon-back" />
               </button>
             </div>
+            <!-- END icon button -->
+            <!-- button -->
             <div class="btn-grp">
               <button
                 type="button"
-                class="btn btn-white-border btn-rounded btn-md btn-full"
+                class="btn btn-md btn-gra"
               >
-                회원가입
+                pradiant
               </button>
-            </div>
-            <div class="btn-grp">
               <button
                 type="button"
-                class="btn btn-apple btn-rounded btn-md btn-full btn-social"
+                class="btn btn-md btn-main"
               >
-                <i class="icon icon-apple" />
-                Apple로 로그인
+                main
               </button>
-            </div>
-            <div class="btn-grp">
               <button
                 type="button"
-                class="btn btn-kakao btn-rounded btn-md btn-full btn-social"
+                class="btn btn-md btn-sub"
               >
-                <i class="icon icon-kakao" />
-                카카오 로그인
+                sub
               </button>
             </div>
-            <!-- 토글 스위치 -->
-            <div>
-              <input
-                id="switch"
-                type="checkbox"
-                class="is-none toggle-switch"
-              >
-              <label
-                for="switch"
-                class="toggle-onoff"
-              />
-            </div>
-            <!-- // 토글 스위치 -->
-            <div class="btn-grp">
-              <button
-                type="button"
-                class="btn btn-white-border-gray btn-xsm btn-rounded-sm"
-              >
-                <i class="icon icon-write" />
-                글 작성
-              </button>
-            </div>
+            <!-- END button -->
           </div>
         </section>
         <!-- END 버튼 -->

@@ -12,3 +12,43 @@
     cursor: default;
   }
 }
+
+// 버튼 높이
+@each $name, $height in $btn-height {
+  .btn-#{$name} {
+    height: $height + px;
+  }
+}
+
+// 버튼 색
+@each $name, $color in $btn-color {
+  .btn-#{$name} {
+    background-color: $color;
+    color: color(text); // 어두운배경 따로 color: white지정하기
+    transition: all 0.3s;
+
+    @include hover {
+      background-color: transparent;
+      border: 1px solid $color;
+    }
+  }
+}
+
+.btn-gra {
+  @include btn-gra();
+}
+
+// 라인 버튼 색
+@each $name, $color in $btn-color {
+  .btn-bd-#{$name} {
+    border: 1px solid $color;
+    background-color: white;
+    color: $color;
+    transition: all 0.3s;
+
+    @include hover {
+      background-color: $color;
+      color: color(text);
+    }
+  }
+}
