@@ -4,6 +4,12 @@
 
   display: inline-block;
   vertical-align: middle;
+
+  .txt {
+    font-size: 1px;
+    writing-mode: tb-rl;
+    color: transparent;
+  }
 }
 
 .icon-back {

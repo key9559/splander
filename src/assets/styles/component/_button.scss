@@ -1,16 +1,31 @@
 /* =================== button =================== */
+.btn-grp {
+  @include flex-btw;
+
+  gap: 10px;
+}
+
 .btn {
   @include bg-op($s: auto);
 
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 3.5px;
+  transition: all 0.3s;
+
+  @include hover {
+    opacity: 0.8;
+  }
 
   &:disabled {
     background-color: #dbdbdb;
     cursor: default;
   }
+}
+
+// 버튼 너비
+.btn-full {
+  width: 100%;
 }
 
 // 버튼 높이
@@ -24,18 +39,12 @@
 @each $name, $color in $btn-color {
   .btn-#{$name} {
     background-color: $color;
-    color: color(text); // 어두운배경 따로 color: white지정하기
-    transition: all 0.3s;
-
-    @include hover {
-      background-color: transparent;
-      border: 1px solid $color;
-    }
+    color: white;
   }
 }
 
 .btn-gra {
-  @include btn-gra();
+  @include gra;
 }
 
 // 라인 버튼 색
@@ -44,11 +53,26 @@
     border: 1px solid $color;
     background-color: white;
     color: $color;
-    transition: all 0.3s;
 
     @include hover {
       background-color: $color;
-      color: color(text);
+      color: white;
     }
+  }
+}
+
+// 아이콘 버튼
+.btn-icon {
+  position: relative;
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+  background-color: color(main);
+
+  .icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
