@@ -21,11 +21,12 @@
           class="link"
           @click="$router.push('/')"
         >
-          <img
+          images
+          <!-- <img
             src="~@/assets/images/logo/logo_bk.svg"
             alt="포켓컴퍼니 모바일 로고"
             class="logo-img"
-          >
+          > -->
         </a>
       </h1>
       <!-- END HD-LOGO -->

@@ -1,0 +1,14 @@
+/* =================== button =================== */
+.btn {
+  @include bg-op($s: auto);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3.5px;
+
+  &:disabled {
+    background-color: #dbdbdb;
+    cursor: default;
+  }
+}

@@ -1,0 +1,13 @@
+/* =================== icon =================== */
+.icon {
+  @include bg-op($s: contain, $p: center);
+
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.icon-back {
+  width: 9px;
+  height: 16px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8.812' height='16.121' viewBox='0 0 8.812 16.121'%3E%3Cpath id='패스_4890' data-name='패스 4890' d='M-11437.33,2326.938l-4.667,4.667-2.333,2.333,7,7' transform='translate(11445.081 -2325.877)' fill='none' stroke='%238d94a0' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'/%3E%3C/svg%3E%0A");
+}

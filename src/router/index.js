@@ -50,71 +50,20 @@ const routes = [
       next();
     }, */
   },
+  /* ====================== event ====================== */
+  // 마이페이지메인
   {
-    path: '/util-postcode', // 우편번호 찾기
-    name: 'UtilPostcode',
-    component: () => import('~@/views/util/Postcode'),
+    path: '/mypage',
+    name: 'MypageMain',
+    component: () => import('~@/views/mypage/MypageMain'),
   },
-  /* ====================== auth ====================== */
-  // 로그인
-  {
-    path: '/login',
-    name: 'Login',
-    component: () => import('~@/views/auth/Login'),
-    meta: { requiresResetScrollHeight: true },
-    beforeEnter: (to, from, next) => {
-      if (store.getters.isUser) {
-        return next({
-          replace: true,
-          name: 'Index',
-        });
-      }
-      next();
-    },
-  },
-  // 회원가입
-  {
-    path: '/register',
-    name: 'Register',
-    component: () => import('~@/views/auth/Register'),
-    meta: { requiresResetScrollHeight: true },
-  },
-  // 회원가입 완료
-  {
-    path: '/register-complete',
-    name: 'RegisterComplete',
-    component: () => import('~@/views/auth/RegisterComplete'),
-    meta: { requiresResetScrollHeight: true },
-  },
-  // 아이디찾기
-  {
-    path: '/find-id',
-    name: 'FindId',
-    component: () => import('~@/views/auth/FindId'),
-    meta: { requiresResetScrollHeight: true },
-  },
-  // 아이디찾기완료
-  {
-    path: '/find-id-complete',
-    name: 'FindIdComplete',
-    component: () => import('~@/views/auth/FindIdComplete'),
-    meta: { requiresResetScrollHeight: true },
-  },
-  // 비밀번호찾기
-  {
-    path: '/find-pw',
-    name: 'FindPw',
-    component: () => import('~@/views/auth/FindPw'),
-    meta: { requiresResetScrollHeight: true },
-  },
-  // 소셜로그인
-  {
-    path: '/social-redirect/:provider',
-    name: 'SocialRedirect',
-    component: () => import('~@/views/auth/SocialRedirect'),
-  },
-
   /* ====================== etc ====================== */
+  // 알림
+  {
+    path: '/alarm',
+    name: 'Alarm',
+    component: () => import('~@/views/Alarm'),
+  },
   // 고객지원
   {
     path: '/developer-info',
@@ -202,7 +151,7 @@ router.beforeEach(async (to, from, next) => {
   // requiresResetScrollHeight 값이 있으면 해당 화면 이동 시 스크롤 맨 위로 이동
   if (to.matched.some(record => record.meta.requiresResetScrollHeight)) {
     setTimeout(() => {
-      document.querySelectorAll('html, .page, .l_center').forEach(x => {
+      document.querySelectorAll('html, .page, .l-center').forEach(x => {
         if (x.scrollTop !== 0) {
           x.scroll({
             top: 0,

@@ -5,19 +5,7 @@
   }
 }
 
-@mixin mobile {
-  @include media-dv(mb) {
-    @content;
-  }
-}
-
-@mixin tablet {
-  @include media-dv(tab) {
-    @content;
-  }
-}
-
-// responsive custom Setting
+// responsive custom
 @mixin media($px, $range: max) {
   @media all and (#{$range}-width: $px) {
     @content;
@@ -33,7 +21,7 @@
     bottom: $b;
 
     left: if($r, auto, $l);
-    right: if($l == 0 or $l, $r, $l);
+    right: $r;
   }
 }
 
@@ -46,21 +34,21 @@
     bottom: $b;
 
     left: if($r, auto, $l);
-    right: if($l == 0 or $l, $r, $l);
+    right: $r;
   }
 }
 
 // size
-@mixin wh($w: null, $h: null) {
-  width: $w;
-  height: $h;
-}
-
-@mixin circle($size) {
-  @include wh($size, $size);
-
+@mixin circle($s) {
+  width: $s;
+  height: $s;
   border-radius: 50%;
   @content;
+}
+
+@mixin square($s) {
+  width: $s;
+  height: $s;
 }
 
 @mixin full {
@@ -68,6 +56,7 @@
   height: 100%;
 }
 
+// flex items
 @mixin flex($d: flex) {
   display: $d;
   @content;
@@ -84,46 +73,32 @@
   justify-content: $jc;
 }
 
-@mixin flex-side {
-  @include flex;
-  @include flex-op(center, space-between);
-}
-
-@mixin flex-center {
-  @include flex;
+@mixin flex-center($d: flex) {
+  display: $d;
   @include flex-op(center, center);
+
+  @content;
 }
 
-@mixin bg-url($path, $img, $op-default: false, $op-p: null, $op-s: null) {
+@mixin flex-btw($d: flex) {
+  display: $d;
+  @include flex-op(center, space-between);
+
+  @content;
+}
+
+// background image
+@mixin bg-url($path, $img) {
   background-image: urlPath($path, $img);
-
-  @if ($op-default) {
-    @include bg-op;
-  }
-
-  @if $op-p and $op-s {
-    @include bg-op($p: $op-p, $s: $op-s);
-  } @else if $op-p {
-    @include bg-op($p: $op-p);
-  } @else if $op-s {
-    @include bg-op($s: $op-s);
-  }
 }
 
-@mixin bg-op($p: center, $s: cover, $r: no-repeat) {
+@mixin bg-op($p: center, $s: auto, $r: no-repeat) {
   background-position: $p;
   background-size: $s;
   background-repeat: $r;
 }
 
-@mixin font-op($c: null, $w: null, $ls: null) {
-  @content;
-
-  font-weight: $w;
-  color: $c;
-  letter-spacing: $ls;
-}
-
+// bafore, after
 @mixin make-before($c: "", $d: block) {
   &:before {
     content: $c;
@@ -140,18 +115,14 @@
   }
 }
 
-@mixin transition-group {
-  /* 인터랙션 관련 스타일 */
-  @content;
-  /* END 인터랙션 관련 스타일 */
-}
-
+// ie
 @mixin ie-style {
   @at-root html.ie & {
     @content;
   }
 }
 
+// input
 @mixin input-reset {
   border-radius: 0;
   background-color: transparent;
@@ -164,33 +135,6 @@
   box-shadow: none;
 }
 
-@mixin input-style(
-  $d: block,
-  $w: 100%,
-  $h: 54px,
-  $bd-wi: 1px,
-  $bd-st: solid,
-  $bd-cl: null,
-  $bd-rd: 6px,
-  $bg-color: white
-) {
-  display: $d;
-  width: $w;
-  height: $h;
-  border: $bd-wi $bd-st $bd-cl;
-  border-radius: $bd-rd;
-  padding: 0 17px;
-  background-color: $bg-color;
-  font-size: emSize(18);
-  @content;
-  &:focus {
-    border-color: color(main);
-  }
-  &::placeholder {
-    opacity: 0.7;
-  }
-}
-
 @mixin hover {
   @include media(600px, min) {
     &:hover {
@@ -201,8 +145,13 @@
   &:focus {
     @content;
   }
+
+  &:active {
+    @content;
+  }
 }
 
+//shortening word
 @mixin ellipse($line-cnt, $line-height) {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -214,47 +163,55 @@
   height: $line-height * $line-cnt; /* line-height 가 1.2em 이고 3라인을 자르기 때문에 height는 1.2em * 3 = 3.6em */
 }
 
-// 아이폰 노치
-@mixin iPhoneXs {
+@mixin remove-ellipse {
+  overflow: visible;
+  text-overflow: unset;
+  height: auto;
+  line-height: 1.4;
+  -webkit-line-clamp: unset; // $line-cnt : 라인 수
+  -webkit-box-orient: unset;
+}
+
+// iphone notch
+@mixin notch {
   /* iPhone XS : 2436x1125px at 458ppi */
   @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
     @content;
   }
-}
 
-@mixin iPhoneXr {
   /* iPhone XR : 1792x828px at 326ppi */
   @media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
     @content;
   }
-}
 
-@mixin iPhoneXsMax {
   /* iPhone XS Max : 2688x1242px at 458ppi */
   @media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
     @content;
   }
 }
 
-@mixin gra(
-  $deg: to left,
-  $start: color(main),
-  $st-per: 0%,
-  $end: color(sub),
-  $e-per: 100%
-) {
-  background: linear-gradient($deg, $start $st-per, $end $e-per);
-  color: white;
+// scroll custom style
+@mixin custom-scroll($c: null, $sub-c: #fff, $r: 0, $w: 4px) {
+  &::-webkit-scrollbar {
+    width: $w;
+    height: 4px;
+    background-color: $sub-c;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $c;
+    border-radius: $r;
+  }
+
+  @include ie-style {
+    scrollbar-arrow-color: $c;
+    scrollbar-face-color: $c;
+    scrollbar-track-color: $sub-c;
+  }
 }
 
-@mixin btn-gra($deg: to left, $start: color(main), $end: color(sub)) {
-  background: linear-gradient($deg, $start 0%, $end 50%, $start 100%);
-  background-size: 200%;
-  background-position: left top;
-  color: white;
-  transition: all 0.3s;
-
-  @include hover {
-    background-position-x: 100%;
+@mixin hide-scroll {
+  &::-webkit-scrollbar {
+    display: none !important;
   }
 }

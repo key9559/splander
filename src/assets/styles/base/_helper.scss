@@ -1,6 +1,6 @@
 /* =================== helper =================== */
 // 노출되지 않을 영역
-.none {
+.is-none {
   display: none;
 }
 
@@ -8,58 +8,8 @@
 .voice-only {
   @include absolute($l: -9999rem);
 
-  font-size: 0;
-}
-
-// 브라우저 크기별 레이아웃 보이기
-.tab-show {
-  display: none;
-  @include tablet {
-    display: block;
-  }
-}
-
-.tab-hide {
-  @include tablet {
-    display: none;
-  }
-}
-
-.mb-show {
-  display: none;
-  @include mobile {
-    display: block;
-  }
-}
-
-.mb-hide {
-  @include mobile {
-    display: none;
-  }
-}
-
-.sm-show {
-  display: none;
-  @include media(360px) {
-    display: block;
-  }
-}
-
-.sm-hide {
-  @include media(360px) {
-    display: none;
-  }
-}
-
-.xsm-show {
-  display: none;
-  @include media(320px) {
-    display: block;
-  }
-}
-
-.xsm-hide {
-  @include media(320px) {
-    display: none;
-  }
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  color: transparent;
 }

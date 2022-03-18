@@ -12,10 +12,15 @@
 // 3. vendor
 
 // 4. component
+@import "component/button";
+@import "component/form";
+@import "component/icon";
+@import "component/card";
 
 // 5. layout
 @import "layout/common";
+@import "layout/header";
+@import "layout/modal";
 
 // 6. page
-@import "page/main";
-@import "page/splander";
+@import "page/terms";

@@ -9,7 +9,7 @@
 }
 
 @function urlPath($pathName, $img) {
-  @return url(path($pathName)+$img);
+  @return url(path($pathName) + $img);
 }
 
 // z Index setting
@@ -23,11 +23,9 @@
   $device-px: map-keys($device-value);
   $device-desc: map-values($device-value);
 
-  @if ($arg=="key") {
+  @if ($arg == "key") {
     @return $device-px;
-  }
-
-  @else if($arg=="value") {
+  } @else if($arg == "value") {
     @return $device-desc;
   }
 }
@@ -35,7 +33,9 @@
 $base-size: 16;
 
 @function rem($target, $context: $base-size) {
-  @return ($target / $context) * 1rem;
+  @return $target / $context * 1rem;
 }
 
-// ex: @include cem(16, 30);
+@function em($target, $context: $base-size) {
+  @return $target / $context * 1em;
+}

@@ -1,11 +1,10 @@
 // gray color는 따로 사용하고, red등의 컬러 추가해서 사용
 $color-set: (
-  text: #333,
-  red: #e01e1b,
-  blue: #4982fd,
-  black: #201d20,
-  green: #12b342,
-  gold: #ffd700,
+  main: #94B3E2,
+  sub: #c5b4e3,
+  text: #1a1e27,
+  red: #e75254,
+  blue: #9ec7f9,
 );
 
 $zIndex-set: (
@@ -19,18 +18,37 @@ $zIndex-set: (
 );
 
 $path-set: (
-  icon: "../../images/icon/",
-  img: "../../images/img/",
+  icon: "~@/assets/images/icon/",
+  img: "~@/assets/images/img/",
+  logo: "~@/assets/images/logo/",
 );
 
 $breakpoints: (
   mb: (
     600px: "모바일",
   ),
-  tab: (
-    900px: "태블릿",
+  sm: (
+    360px: "작은화면",
   ),
-  web: (
-    1200px: "웹",
+  xsm: (
+    320px: "아이폰 옛날버전",
   ),
+);
+
+// button & badge
+// btn 높이 추가하면 .btn-ht-크기 가 추가된다.
+$btn-height: (
+  md: 54,
+);
+
+// btn color 추가하면 .btn-색이름 .btn-bd-색이름 .btn-gst-색이름 이 추가된다.
+$btn-color: (
+  main: #{color(main)},
+);
+
+// .btn-소셜이름 이 추가된다.
+$socail: (
+  kakao: #fae300,
+  // 추후 색 설정
+  apple: #000,
 );
